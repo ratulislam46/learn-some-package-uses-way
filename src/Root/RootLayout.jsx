@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../Components/Navbar/Navbar';
-import Carosel from '../Packages/Carosel/Carosel';
-
+import { Outlet } from 'react-router';
 const RootLayout = () => {
     return (
         <div>
@@ -9,10 +8,11 @@ const RootLayout = () => {
                 <Navbar></Navbar>
             </nav>
             <main>
-                <section>
-                    <Carosel></Carosel>
-                </section>
+                <Outlet></Outlet>
             </main>
+            <footer>
+                <h1>Footer section</h1>
+            </footer>
         </div>
     );
 };
