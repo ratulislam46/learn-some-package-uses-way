@@ -5,6 +5,8 @@ import AllNavbar from "../Components/Navbar/AllNavbar";
 import About from "../Page/About/About";
 import Dashboard from "../Page/Dashboard/Dashboard";
 import DashBoardLayout from "../Root/DashBoardLayout";
+import Admin from "../Page/Dashboard/Admin/Admin";
+import User from "../Page/Dashboard/User/User";
 
 export const router = createBrowserRouter([
     {
@@ -30,8 +32,16 @@ export const router = createBrowserRouter([
         Component: Dashboard,
         children: [
             {
-                index:true,
+                index: true,
                 Component: DashBoardLayout
+            },
+            {
+                path: '/dashboard/admin',
+                Component: Admin
+            },
+            {
+                path: '/dashboard/user',
+                Component: User
             }
         ]
     }
