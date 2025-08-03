@@ -11,14 +11,14 @@ const responsive = {
 
 const Carosel = () => {
     const [reviews, setReviews] = useState([]);
-    const caroselref = useRef()
+    const caroselref = useRef();
 
     useEffect(() => {
         const result = fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
             .then(res => res.json())
             .then(data => setReviews(data.meals))
     }, []);
-    console.log(reviews);
+    // console.log(reviews);
 
     return (
         <div>
