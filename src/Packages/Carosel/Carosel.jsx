@@ -37,7 +37,7 @@ const Carosel = () => {
                 arrows={false}
             >
                 {reviews?.map((meal) => (
-                    <div key={meal.idMeal} className='border p-2 rounded-md bg-white mb-4'>
+                    <div key={meal.idMeal} className='border p-2 rounded-md bg-cyan-700 mb-4'>
                         <h2 className="text-xl font-bold mb-2">{meal.strMeal}</h2>
                         <img src={meal.strMealThumb} alt={meal.strMeal} className="w-full h-48 object-cover rounded-md" />
                     </div>
